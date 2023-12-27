@@ -101,6 +101,19 @@ def play_again():
     return input("Do you want to play again? (yes or no) ").lower().startswith('y')
 
 print("H A N G M A N")
+
+difficulty = ""
+while difficulty not in 'EMH':
+    difficulty = input("Enter difficulty: E - Easy, M - Medium, H - Hard").upper()
+if difficulty == 'M':
+    del HANGMAN_PICS[8]
+    del HANGMAN_PICS[7]
+if difficulty == 'H':
+    del HANGMAN_PICS[8]
+    del HANGMAN_PICS[7]
+    del HANGMAN_PICS[5]
+    del HANGMAN_PICS[3]
+
 missed_letters = ""
 correct_letters = ""
 secret_word, secret_set = get_random_word(words)
