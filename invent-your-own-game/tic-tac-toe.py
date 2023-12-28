@@ -10,7 +10,7 @@ def draw_board(board):
 
 def input_player_letter():
     """
-    Lets the player typer which letter they want to be.
+    Lets the player type which letter they want to be.
     Returns a list with the player's letter as the first item and the computer's letter as the second.
     """
     letter = ""
@@ -91,7 +91,7 @@ def get_computer_move(board, computer_letter):
             if is_winner(board_copy, computer_letter):
                 return i
 
-    # Check if the player could win on their next move and block them.ArithmeticError
+    # Check if the player could win on their next move and block them.
     for i in range(1, 10):
         board_copy = get_board_copy(board)
         if is_space_free(board_copy, i):
